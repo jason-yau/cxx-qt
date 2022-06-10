@@ -1,0 +1,239 @@
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js light">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Build - CXX-Qt Documentation</title>
+        <!-- Custom HTML head -->
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        <link rel="icon" href="../favicon.svg">
+        <link rel="shortcut icon" href="../favicon.png">
+        <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+        <link rel="stylesheet" href="../css/print.css" media="print">
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../fonts/fonts.css">
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="../highlight.css">
+        <link rel="stylesheet" href="../tomorrow-night.css">
+        <link rel="stylesheet" href="../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+    </head>
+    <body>
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">
+            var path_to_root = "../";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded affix "><a href="../index.html">Introduction</a></li><li class="spacer"></li><li class="chapter-item expanded "><a href="../getting-started/index.html"><strong aria-hidden="true">1.</strong> Getting-Started</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../getting-started/1-qobjects-in-rust.html"><strong aria-hidden="true">1.1.</strong> QObjects in Rust</a></li><li class="chapter-item expanded "><a href="../getting-started/2-our-first-cxx-qt-module.html"><strong aria-hidden="true">1.2.</strong> Our first CXX-Qt module</a></li><li class="chapter-item expanded "><a href="../getting-started/3-exposing-to-qml.html"><strong aria-hidden="true">1.3.</strong> Exposing to QML</a></li><li class="chapter-item expanded "><a href="../getting-started/4-qml-gui.html"><strong aria-hidden="true">1.4.</strong> Creating the QML GUI</a></li><li class="chapter-item expanded "><a href="../getting-started/5-cmake-integration.html"><strong aria-hidden="true">1.5.</strong> Building with CMake</a></li></ol></li><li class="chapter-item expanded "><a href="../qobject/index.html"><strong aria-hidden="true">2.</strong> QObject</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../qobject/macro.html"><strong aria-hidden="true">2.1.</strong> Macro</a></li><li class="chapter-item expanded "><a href="../qobject/data_struct.html"><strong aria-hidden="true">2.2.</strong> Data Struct</a></li><li class="chapter-item expanded "><a href="../qobject/rustobj_struct.html"><strong aria-hidden="true">2.3.</strong> RustObj Struct</a></li><li class="chapter-item expanded "><a href="../qobject/cpp_object.html"><strong aria-hidden="true">2.4.</strong> Cpp Object</a></li><li class="chapter-item expanded "><a href="../qobject/signals_enum.html"><strong aria-hidden="true">2.5.</strong> Signals enum</a></li><li class="chapter-item expanded "><a href="../qobject/handlers.html"><strong aria-hidden="true">2.6.</strong> Handlers</a></li></ol></li><li class="chapter-item expanded "><a href="../concepts/index.html"><strong aria-hidden="true">3.</strong> Concepts</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../concepts/bridge.html"><strong aria-hidden="true">3.1.</strong> Bridge</a></li><li class="chapter-item expanded "><a href="../concepts/qt.html"><strong aria-hidden="true">3.2.</strong> Qt</a></li><li class="chapter-item expanded "><a href="../concepts/types.html"><strong aria-hidden="true">3.3.</strong> Types</a></li><li class="chapter-item expanded "><a href="../concepts/build_rs_and_cargo.html"><strong aria-hidden="true">3.4.</strong> Build.rs and Cargo.toml</a></li><li class="chapter-item expanded "><a href="../concepts/cmake.html"><strong aria-hidden="true">3.5.</strong> CMake Integration</a></li><li class="chapter-item expanded "><a href="../concepts/register_types.html"><strong aria-hidden="true">3.6.</strong> Register Types</a></li><li class="chapter-item expanded "><a href="../concepts/qqmlextensionplugin.html"><strong aria-hidden="true">3.7.</strong> QQmlExtensionPlugin</a></li><li class="chapter-item expanded "><a href="../concepts/threading.html"><strong aria-hidden="true">3.8.</strong> Threading</a></li><li class="chapter-item expanded "><a href="../concepts/nested_objects.html"><strong aria-hidden="true">3.9.</strong> Nested Objects</a></li></ol></li><li class="chapter-item expanded "><a href="../internal/index.html"><strong aria-hidden="true">4.</strong> Internal</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../internal/build.html" class="active"><strong aria-hidden="true">4.1.</strong> Build</a></li></ol></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky bordered">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light (default)</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">CXX-Qt Documentation</h1>
+
+                    <div class="right-buttons">
+                        <a href="../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <!--
+SPDX-FileCopyrightText: 2022 Klarälvdalens Datakonsult AB, a KDAB Group company <info@kdab.com>
+SPDX-FileContributor: Andrew Hayzen <andrew.hayzen@kdab.com>
+
+SPDX-License-Identifier: MIT OR Apache-2.0
+-->
+<h1 id="build"><a class="header" href="#build">Build</a></h1>
+<p>The process of building a CXX-Qt project internally is complex and contains multiple stages.</p>
+<ol>
+<li>CMake build is started, and triggers cargo build</li>
+<li>CXX-Qt build generates C++ sources and static library</li>
+<li>CMake builds the project C++ sources combined with generated sources</li>
+<li>CMake links the target to the Rust static library and Qt</li>
+</ol>
+<h2 id="1-cargo-build"><a class="header" href="#1-cargo-build">1. Cargo build</a></h2>
+<p>When cargo build is triggered, this causes dependencies to be downloaded and built. One of these is
+<code>cxx-qt-lib</code> which defines helper Qt types. It contains a <code>build.rs</code> which uses CXX to generate C++
+sources for the Qt types. These are stored into a single JSON file in the OUT_DIR of the crate.
+Note that we cannot know where the <code>OUT_DIR</code> or other files of <code>cxx-qt-lib</code> are, from the main
+project, as they are in hashed directories. Therefore as <code>cxx-qt-lib</code> is built it uses <code>include_str!</code>
+to expose the generated JSON into the <code>QT_TYPES_CXX_JSON</code> variable.</p>
+<p>Next cargo triggers the <code>build.rs</code> of the main project, which executes <code>cxx-qt-build</code> helper methods.</p>
+<h2 id="2-cxx-qt-build"><a class="header" href="#2-cxx-qt-build">2. CXX-Qt build</a></h2>
+<p>Firstly <code>cxx-qt-build</code> uses CXX to generate C++ sources for the project's Rust source files into a
+well known location for CMake (<code>target/cxx-qt-gen/</code>).</p>
+<p>Then <code>cxx-qt-build</code> writes any static headers (such as CXX headers) and <code>QQmlExtensionPlugin</code>
+generated code to the same folder.</p>
+<p>Next it uses the strings <code>QT_TYPES_HEADER</code>, <code>QT_TYPES_SOURCE</code>, and <code>QT_TYPES_CXX_JSON</code> (which
+represents multiple files) from <code>cxx-qt-lib</code> to write the C++ source files into a well known
+location for CMake (<code>target/cxx-qt-lib/</code>).</p>
+<p>Finally it writes a list of the generated C++ sources into a <code>cpp_sources.txt</code> file in the
+<code>cxx-qt-gen</code> folder.</p>
+<p>Cargo now continues building the Rust project as normal, expanding macros and creating a static library.</p>
+<h2 id="3-cmake-build"><a class="header" href="#3-cmake-build">3. CMake build</a></h2>
+<p>Now that Rust has completed, CMake reads the generated C++ sources and combines these with the projects
+C++ sources (any QML resources are also added at this stage).</p>
+<p>This results in an executable target within CMake.</p>
+<h2 id="4-cmake-link"><a class="header" href="#4-cmake-link">4. CMake link</a></h2>
+<p>Now that we have an executable target, we first link the target to the Rust static library from
+cargo. Then we link any external libraries, eg for threading, and then finally link to Qt.</p>
+<p>This then results in CMake producing a binary which has Rust combined with the C++ application.</p>
+<h2 id="future"><a class="header" href="#future">Future</a></h2>
+<p>In the future there are multiple improvements that we could like to make to the CMake build process.</p>
+<ul>
+<li>Split the CXX generation and Rust build into separate stages. Currently the configure stage of
+CMake causes Rust to build. Instead create a CLI tool which simply generates C++ sources
+for given Rust sources and writes them to a given location. Then this can be used to generate
+the C++ sources and a normal cargo build can be used in the CMake build phase later
+<a href="https://github.com/KDAB/cxx-qt/issues/106">https://github.com/KDAB/cxx-qt/issues/106</a>
+<ul>
+<li>How will CMake know which Rust files to parse? It would be best if we can point it to a
+manifest and it could detect the Rust source files.</li>
+<li>What phase of the process will write the <code>cxx-qt-lib</code> files?</li>
+</ul>
+</li>
+<li>Detect which libraries need linking from dependent crates. Eg if your Rust plugin uses diesel
+with the sqlite implementation, you need the final CMake target to link against
+<a href="https://github.com/KDAB/cxx-qt/issues/29">https://github.com/KDAB/cxx-qt/issues/29</a></li>
+<li>Avoid collisions in naming in both the C++ includes
+<a href="https://github.com/KDAB/cxx-qt/issues/19">https://github.com/KDAB/cxx-qt/issues/18</a></li>
+<li>Consider if we can expose generated sources in a way with works with Cargo workspaces.
+At the moment multiple projects will collide with <code>target/cxx-qt-*</code>
+<a href="https://github.com/KDAB/cxx-qt/pull/84">https://github.com/KDAB/cxx-qt/pull/84</a></li>
+</ul>
+<h2 id="diagram"><a class="header" href="#diagram">Diagram</a></h2>
+<p>An abstract diagram of the current flow can be seen below.</p>
+<div style="background-color: white; padding: 1rem; text-align: center;">
+<p><img src="../images/build_abstract.svg" alt="Threading Abstract" /></p>
+</div>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../internal/index.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../internal/index.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+        <script type="text/javascript">
+            window.playground_copyable = true;
+        </script>
+        <script src="../elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../searcher.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+    </body>
+</html>
